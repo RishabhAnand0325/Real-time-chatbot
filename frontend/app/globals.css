@@ -7,7 +7,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #0f0c29; /* Fallback */
+  background: #0f0c29;
   min-height: 100vh;
 }
 
@@ -21,7 +21,6 @@ body {
 }
 
 @layer components {
-  /* Glassmorphism Utilities */
   .glass-panel {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(16px);
@@ -39,7 +38,6 @@ body {
 }
 
 @layer utilities {
-  /* Scrollbar hiding */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
