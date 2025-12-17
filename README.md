@@ -2,6 +2,8 @@
 
 A high-performance, asynchronous AI backend using Python (FastAPI), WebSockets, and Supabase, coupled with a visually stunning, glassmorphic Next.js frontend.
 
+![Chatbot Interface](./screenshots/chatbot-interface.png)
+
 ## 🚀 Features
 
 * **Real-time Streaming**: Instant LLM token delivery via WebSockets for low-latency interactions.
