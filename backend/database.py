@@ -17,8 +17,6 @@ async def create_session(session_id: str, user_id: str):
         "user_id": user_id,
         "start_time": "now()"
     }
-    # Supabase-py is sync wrapper but handles async requests efficiently in threads usually. 
-    # For strict async, use postgrest-py directly, but this works for standard load.
     supabase.table("session_metadata").insert(data).execute()
 
 async def log_event(session_id: str, event_type: str, content: str):
@@ -41,4 +39,5 @@ async def update_session_summary(session_id: str, summary: str, duration: int):
 async def get_session_history(session_id: str):
     """Fetches full conversation history for summarization."""
     response = supabase.table("event_log").select("*").eq("session_id", session_id).order("timestamp").execute()
+
     return response.data
