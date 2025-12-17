@@ -37,7 +37,6 @@ export default function ChatInterface() {
   }, []);
 
   const scrollToBottom = () => {
-    // UPDATED: 'block: nearest' prevents the whole page from jumping if the chat is tall
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
 
@@ -54,10 +53,7 @@ export default function ChatInterface() {
   };
 
   return (
-    // UPDATED: Fixed height to 75vh and max-width-5xl for a balanced "floating" look
     <div className="flex flex-col h-[75vh] w-full max-w-5xl glass-panel rounded-3xl overflow-hidden relative shadow-2xl border border-white/10">
-      
-      {/* Header */}
       <div className="p-4 border-b border-white/5 flex items-center justify-between bg-black/40 backdrop-blur-md shrink-0">
         <div className="flex items-center gap-2">
           <div className="p-2 bg-purple-500/20 rounded-lg">
@@ -73,8 +69,6 @@ export default function ChatInterface() {
           <span className="w-3 h-3 rounded-full bg-green-500 shadow-sm"></span>
         </div>
       </div>
-
-      {/* Chat Area */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6 no-scrollbar bg-gradient-to-b from-transparent to-black/20">
         {messages.length === 0 && (
           <div className="flex h-full flex-col items-center justify-center text-white/30 space-y-4">
@@ -102,7 +96,6 @@ export default function ChatInterface() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area */}
       <div className="p-4 bg-black/40 border-t border-white/5 backdrop-blur-lg shrink-0">
         <div className="relative flex items-center gap-3">
           <input
@@ -126,4 +119,5 @@ export default function ChatInterface() {
       </div>
     </div>
   );
+
 }
