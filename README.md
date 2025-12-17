@@ -163,3 +163,5 @@ project-root/
     │   └── TypingIndicator.tsx # Visual animation for AI loading state
     ├── tailwind.config.ts    # Tailwind CSS configuration
     └── .env.local            # Frontend public variables
+```
+
