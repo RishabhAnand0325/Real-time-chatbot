@@ -167,5 +167,3 @@ project-root/
     └── .env.local            # Frontend public variables
 ```
 
-![Supabase Eventlogs](./screenshots/supabase-eventlog.png)
-
